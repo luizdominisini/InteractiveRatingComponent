@@ -1,0 +1,154 @@
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.body-bg {
+  background: var(--VeryDarkBlue);
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.body-container {
+  display: grid;
+  gap: 20px;
+  background: var(--DarkBlue);
+  width: max-content;
+  padding: 40px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 32px;
+}
+
+.imagem > img {
+  max-width: 100%;
+  width: 24px;
+}
+
+.imagem {
+  position: relative;
+}
+
+.imagem::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 12px;
+  top: -16px;
+  left: -16px;
+}
+
+.body-container h1 {
+  color: var(--White);
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.body-container p {
+  color: var(--LightGrey);
+  max-width: 40ch;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.numeros {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.numerosItem {
+  background-color: var(--VeryDarkBlue);
+  padding: 20px 24px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.numeros div:hover {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+  background-color: var(--Orange);
+  border: none;
+  border-radius: 40px;
+  padding: 20px;
+  font-size: 1rem;
+  letter-spacing: .12rem;
+  font-weight: bold;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover {
+  background-color:  hsl(25, 79%, 48%);
+}
+
+.selecionado {
+  background-color: var(--Orange);
+}
+
+.body-submit {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--DarkBlue);
+  width: max-content;
+  padding: 40px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 32px;
+}
+
+.body-submit img {
+  max-width: 100%;
+}
+
+.body-submit h1 {
+  color: var(--White);
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+#second {
+  color: var(--LightGrey);
+  max-width: 40ch;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#escolhido {
+  background-color: var(--VeryDarkBlue);
+  color: var(--Orange);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: .875rem;
+  letter-spacing: .1em;
+  margin-top: 8px;
+}
